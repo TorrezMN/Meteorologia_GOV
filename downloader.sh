@@ -7,6 +7,8 @@ current_date=$(date +'%d')
 current_hour=$(date +'%H')
 current_month=$(date +'%B')
 
+uuid=$(uuidgen)
+
 
 # Set the base URL
 base_url="https://www.meteorologia.gov.py/emas/data.json"
@@ -18,5 +20,5 @@ file_tree="./data/$current_year/$current_month/"
 mkdir -p $file_tree
 
 # Download the file from the URL and store it in the "data" folder
-wget -O "$file_tree/data-$current_date-$current_hour.json" $base_url
+wget -O "$file_tree/data-$current_date-$current_hour-$uuid.json" $base_url
 
