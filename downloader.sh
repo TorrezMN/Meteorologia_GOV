@@ -10,6 +10,8 @@ current_month=$(date +'%B')
 uuid=$(uuidgen)
 
 
+cd /home/torrezmn/Documentos/Meteorologia_GOV
+
 # Set the base URL
 base_url="https://www.meteorologia.gov.py/emas/data.json"
 
